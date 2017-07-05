@@ -30,7 +30,7 @@ inserting a `<script>` into the `default.html` file (as shown below).
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 {% endhighlight %}
 
-Math constructs in *LaTeX*, for example, `$$E = mc^2$$`, can be rendered
+Math constructs in [LaTeX][latex], for example, `$$E = mc^2$$`, can be rendered
 directly into a nicely formated version, $$E = mc^2$$.  This will come in handy
 as we introduce formulae and equations in subsequent posts.
 
@@ -38,7 +38,8 @@ In the process of setting up this blog, I learned how to add a comment section
 to posts using [Disqus][disqus], and also display a comment count on the home
 page for individual posts.  This process is surprisingly painless, simply
 requiring me to register on Disqus, and adding an embedded comment section is
-as simple as pasting this code (provided by Disqus) to the template HTML file:
+as simple as pasting this snippet (provided by Disqus) to the template HTML
+file:
 {% highlight html %}{% raw %}
 {% if page.comments %}
 <div id="disqus_thread"></div>
@@ -62,28 +63,29 @@ var disqus_config = function () {
 </noscript>
 {% endif %}
 {% endraw %}{% endhighlight %}
-and add comment counts to individual posts with:
+then I added comment counts to individual posts with:
 {% highlight html %}{% raw %}
 <a data-disqus-identifier={{ post.id }} href="{{ post.url | relative_url }}#disqus_thread"></a>
 <script id="dsq-count-scr" src="//admk.disqus.com/count.js" async></script>
 {% endraw %}{% endhighlight %}
-and that's it!  So you can expect fast responses from me by commenting.
+and that's it!  So you can expect fast responses from me by commenting
+:laughing:.
 
 # Things to write about
 
 I plan to write a few posts about things I did in my PhD, which focuses on
 numerical programs, and how we automatically optimize them to run as accurate,
-fast and resource-efficient as possible on FPGAs.  I expect this to be quite
-a dense introduction to the underlying techniques, so this will be a 3-part
-series at least, in which I will respectively go through the rationale for
-doing so, how programs can be analyzed for accuracy, latency and area when
+fast and resource-efficient as possible on [FPGAs][fpga].  I expect this to
+be quite a dense introduction to the underlying techniques, so this will be a
+3-part series at least, in which I will respectively go through the rationale
+for doing so, how programs can be analyzed for accuracy, latency and area when
 synthesized into circuits, and finally how we can use the information to guide
 the optimization process.
 
 I also envision new stuffs to be posted here as work progresses, which I do not
-have specifics to share for the moment, except the keywords *FPGA* and *deep
-learning*.  I have a lot to learn and a lot of work to be done, I certainly
-have high expectations for future updates!
+have specifics to share for the moment, except the keywords [FPGA][fpga] and
+[deep learning][dl].  I have a lot to learn and a lot of work to be done, I
+certainly have high expectations for future updates!
 
 Although this blog will be mostly work related, please anticipate for other
 non-technical things (or technical things that are highly uncorrelated with
@@ -94,6 +96,9 @@ the following weeks to come.
 
 [jekyll]: https://jekyllrb.com
 [github]: https://www.github.com
+[latex]: https://www.latex-project.org
 [theme]: https://github.com/lorepirri/cayman-blog
 [mathjax]: https://www.mathjax.org
 [disqus]: https://www.disqus.com
+[fpga]: https://www.xilinx.com/training/fpga/fpga-field-programmable-gate-array.htm
+[dl]: http://www.deeplearningbook.org

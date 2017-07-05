@@ -8,6 +8,7 @@ excerpt_separator: <!--more-->
 plugins:
     - jekyll-feed
     - jekyll-assets
+    - jemoji
 
 show_downloads: false
 cayman-blog:

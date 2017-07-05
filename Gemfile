@@ -4,3 +4,4 @@ gemspec
 
 gem 'jekyll-feed'
 gem 'jekyll-assets'
+gem 'jemoji'
