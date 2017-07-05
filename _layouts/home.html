@@ -18,10 +18,15 @@ layout: default
         <span class="post-meta">{{ post.date | date: date_format }}</span>
 
         <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
+          <a class="post-link" href="{{ post.url | relative_url }}" title="{{ post.title }}">
+              {{ post.title | escape }}
+          </a>
         </h2>
 
-        <span>{{ post.excerpt | markdownify | truncatewords: 30 }}</span>
+        <span>
+            {{ post.excerpt | remove: '<p>' | remove: '</p>' |
+               truncatewords: 70 }}
+        </span>
 
       </li>
     {% endfor %}

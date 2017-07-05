@@ -11,8 +11,9 @@ as I tend to forget things I did and ideas I had.
 
 For this reason, I have always wanted to start a blog, documenting everything
 that have crossed my mind.  I also aim to do this frequently, which could be
-useful to organize what I have done already and to plan for the next step.
-Plus, I could perhaps gain a little audience of my blog in the process.
+useful to organize what I have done already and to plan for the next step, and
+allow me to focus on work, avoiding the distractions.  Plus, I could perhaps
+gain a little audience of my blog in the process.  <!--more-->
 
 # Jekyll
 
