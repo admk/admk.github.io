@@ -2,6 +2,7 @@
 layout: post
 title: A new beginning
 date: 2017-7-5
+comments: true
 categories: misc
 ---
 
@@ -33,6 +34,41 @@ Math constructs in *LaTeX*, for example, `$$E = mc^2$$`, can be rendered
 directly into a nicely formated version, $$E = mc^2$$.  This will come in handy
 as we introduce formulae and equations in subsequent posts.
 
+In the process of setting up this blog, I learned how to add a comment section
+to posts using [Disqus][disqus], and also display a comment count on the home
+page for individual posts.  This process is surprisingly painless, simply
+requiring me to register on Disqus, and adding an embedded comment section is
+as simple as pasting this code (provided by Disqus) to the template HTML file:
+{% highlight html %}{% raw %}
+{% if page.comments %}
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+    this.page.url = "http://admk.github.io{{ page.url }}";
+    this.page.identifier = "{{ page.id }}";
+};
+(function() {
+    var d = document, s = d.createElement('script');
+    s.src = '//admk.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+        comments powered by Disqus.
+    </a>
+</noscript>
+{% endif %}
+{% endraw %}{% endhighlight %}
+and add comment counts to individual posts with:
+{% highlight html %}{% raw %}
+<a data-disqus-identifier={{ post.id }} href="{{ post.url | relative_url }}#disqus_thread"></a>
+<script id="dsq-count-scr" src="//admk.disqus.com/count.js" async></script>
+{% endraw %}{% endhighlight %}
+and that's it!  So you can expect fast responses from me by commenting.
+
 # Things to write about
 
 I plan to write a few posts about things I did in my PhD, which focuses on
@@ -52,10 +88,12 @@ have high expectations for future updates!
 Although this blog will be mostly work related, please anticipate for other
 non-technical things (or technical things that are highly uncorrelated with
 work), as I master the art of procrastination.  I guess that's it for now, and
-I can't wait to update on the things promised to I write about in this post.
+I can't wait to update on the things promised to I write about in this post in
+the following weeks to come.
 
 
 [jekyll]: https://jekyllrb.com
 [github]: https://www.github.com
 [theme]: https://github.com/lorepirri/cayman-blog
 [mathjax]: https://www.mathjax.org
+[disqus]: https://www.disqus.com

@@ -15,7 +15,12 @@ layout: default
       <li>
 
         {% assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <span class="post-meta">
+            {{ post.date | date: date_format }}
+            {% if post.comments %} •
+            <a data-disqus-identifier={{ post.id }} href="{{ post.url | relative_url }}#disqus_thread"></a>
+            {% endif %}
+        </span>
 
         <h2>
           <a class="post-link" href="{{ post.url | relative_url }}" title="{{ post.title }}">
