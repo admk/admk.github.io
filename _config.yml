@@ -1,14 +1,16 @@
 title: Stochastic determinism
 description:
-    Sporatic thoughts from me, which might as well have been synthesized
+    Sporadic thoughts from me, which might as well have been synthesized
     by a Generative Adversial Network.
 author: "Xitong Gao"
 
-show_downloads: false
-cayman-blog:
-    # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-    date_format: "%b %-d, %Y"
-theme: # leave it empty
-
 plugins:
     - jekyll-feed
+    - jekyll-assets
+
+show_downloads: false
+cayman-blog:
+    # refer to http://shopify.github.io/liquid/filters/date/
+    # if you want to customize this
+    date_format: "%-d %b %Y"
+theme: # leave it empty
