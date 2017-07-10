@@ -41,16 +41,18 @@ requiring me to register on Disqus, and adding an embedded comment section is
 as simple as pasting this snippet (provided by Disqus) to the template HTML
 file:
 {% highlight html %}{% raw %}
+{% if site.disqus_shortname %}
 {% if page.comments %}
+<hr/>
 <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
-    this.page.url = "http://admk.github.io{{ page.url }}";
+    this.page.url = "{{ page.url | prepend: site.github.url }}";
     this.page.identifier = "{{ page.id }}";
 };
 (function() {
     var d = document, s = d.createElement('script');
-    s.src = '//admk.disqus.com/embed.js';
+    s.src = '//{{ site.disqus_shortname }}.disqus.com/embed.js';
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
 })();
@@ -61,6 +63,7 @@ var disqus_config = function () {
         comments powered by Disqus.
     </a>
 </noscript>
+{% endif %}
 {% endif %}
 {% endraw %}{% endhighlight %}
 then I added comment counts to individual posts with:

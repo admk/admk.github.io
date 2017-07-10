@@ -3,16 +3,12 @@ description:
     Sporadic thoughts from me, which might as well have been synthesized
     by a Generative Adversial Network.
 author: "Xitong Gao"
-excerpt_separator: <!--more-->
 
 plugins:
     - jekyll-feed
     - jekyll-assets
     - jemoji
 
-show_downloads: false
-cayman-blog:
-    # refer to http://shopify.github.io/liquid/filters/date/
-    # if you want to customize this
-    date_format: "%-d %b %Y"
-theme: # leave it empty
+excerpt_separator: <!--more-->
+disqus_shortname: admk
+txtpen_sitename:
