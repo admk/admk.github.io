@@ -3,7 +3,7 @@ layout: post
 title: A new beginning
 date: 2017-7-5
 comments: true
-categories: misc
+tags: [misc]
 ---
 
 As a modern living being it is quite often to be distracted by too many things.

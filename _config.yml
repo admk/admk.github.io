@@ -9,6 +9,7 @@ plugins:
     - jekyll-assets
     - jemoji
 
+github:
+    url: https://admk.github.io
 excerpt_separator: <!--more-->
 disqus_shortname: admk
-txtpen_sitename:
