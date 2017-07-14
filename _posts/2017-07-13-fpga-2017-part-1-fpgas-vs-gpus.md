@@ -26,13 +26,14 @@ review them here.
 
 # Can FPGAs Beat GPUs in Accelerating Next-Generation Deep Neural Networks?
 
-The [first paper][nurvitadhi17] with the above title that I am going to
-review is written by Nurvitadhi *et al.* from Intel.  The authors pitch their
-latest [Arria 10][arria10] and [Stratix 10][stratix10] devices against [Titan
-Xp][titanxp] in the deep learning arena, and show that Stratix 10 has between
-10% and 5.4x better performance than Titan Xp in terms of common [GEneral
-Matrix to matrix Multiplication (GEMM)][gemm] operations, which is [at the
-heart][warden15] of *GPU-based* deep learning algorithms.
+The [first paper {% include fa.html name='fa-file-pdf-o' %}][nurvitadhi17] with
+the above title that I am going to review is written by Nurvitadhi *et al.*
+from Intel.  The authors pitch their latest [Arria 10][arria10] and [Stratix
+10][stratix10] devices against [Titan Xp][titanxp] in the deep learning arena,
+and show that Stratix 10 has between 10% and 5.4x better performance than Titan
+Xp in terms of common [GEneral Matrix to matrix Multiplication (GEMM)][gemm]
+operations, which is [at the heart][warden15] of *GPU-based* deep learning
+algorithms.
 
 For the case studies, the authors start by evaluating the two FPGAs and Titan
 Xp for dense and sparse GEMM with single-precision.  Titan Xp with a 11 TFlops
@@ -48,20 +49,22 @@ below](#nurvitadhi17) shows the RTL templates Nurvitadhi *et al.* used to
 generate FPGA GEMM implementations.
 
 ![The RTL templates Nurvitadhi *et al.* used to generate FPGA GEMM
-implementations.](/assets/images/nurvitadhi17.png){: #nurvitadhi17 }
+implementations.](/assets/images/nurvitadhi17.png){:
+.center-image #nurvitadhi17 }
 
 I believe this paper did a good job in justifying FPGAs for deep learning
 applications.  However, there is an important limiting factor to look at for
-end users, and could be the ultimate reason why many would still consider GPUs
-in favor.  This factor, which the authors from Intel didn't mention, is the
-cost.  Although Stratix 10 could be 50% faster in sparse GEMM, its [development
-kit][stratix10-devkit] is currently priced at $8,000, which is 6.67x that of
-a [Titan Xp][titanxp-price].  This places Stratix 10 at 2.06 GOP/s/$, whereas
-Titan Xp is at 9.07 GOP/s/$!  Although the cost-effectiveness result favors
-Stratix 10 in binary neural networks (BNNs), *e.g.*, [XNOR-Net][xnor-net], BNNs
-still cannot match the accuracy of a standard deep neural network in tasks such
-as [ILSVRC][ilsvrc].  Moreover, the high development cost of FPGA applications
-further exacerbates the situation.
+end users, and could be the ultimate reason why many would still consider
+GPUs in favor.  This factor, which the authors from Intel didn't mention,
+is the cost.  Although Stratix 10 could be 50% faster in sparse GEMM, its
+[development kit][stratix10-devkit] is currently priced at $8,000, which is
+6.67x that of a [Titan Xp][titanxp-price].  This places Stratix 10 at 2.06
+GOP/s/$, whereas Titan Xp is at 9.07 GOP/s/$!  Although the cost-effectiveness
+result favors Stratix 10 in binary neural networks (BNNs), *e.g.*, [XNOR-Net {%
+include fa.html name='fa-file-pdf-o' %}][xnor-net], BNNs still cannot match the
+accuracy of a standard deep neural network in tasks such as [ILSVRC][ilsvrc].
+Moreover, the high development cost of FPGA applications further exacerbates
+the situation.
 
 Personally I don't think that the low cost-effectiveness of current generation
 FPGAs would ultimately deter users.  On the contrary, because we are still
