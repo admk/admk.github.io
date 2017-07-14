@@ -38,12 +38,17 @@ For the case studies, the authors start by evaluating the two FPGAs and Titan
 Xp for dense and sparse GEMM with single-precision.  Titan Xp with a 11 TFlops
 theoretical peak performance, has certainly greater throughput than Stratix 10,
 which is rated 10 TFlops theoretical peak performance.  Their positions however
-reversed when we consider the sparse GEMM, as Titan Xp performed worse than
-the dense variant, and Stratix 10, with a greater performance at approximately
+reversed as we consider the sparse GEMM, as Titan Xp performed worse than the
+dense variant, and Stratix 10, with a greater performance at approximately
 16.5 tera operations per second, wins the GEMM competition for deep neural
 networks.  Additionally, with the advantage of hardware specialization, Stratix
 10 triumphs in terms of GEMMs with reduced precision data-types such as 6-bit
-integers and binary (1-bit) and ternary (2-bit) representations.
+integers and binary (1-bit) and ternary (2-bit) representations.  The [figure
+below](#nurvitadhi17) shows the RTL templates Nurvitadhi *et al.* used to
+generate FPGA GEMM implementations.
+
+![The RTL templates Nurvitadhi *et al.* used to generate FPGA GEMM
+implementations.](/assets/images/nurvitadhi17.png){: #nurvitadhi17 }
 
 I believe this paper did a good job in justifying FPGAs for deep learning
 applications.  However, there is an important limiting factor to look at for
