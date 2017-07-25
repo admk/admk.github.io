@@ -8,12 +8,17 @@
         <meta name="theme-color" content="#157878">
 
         {% if page.title %}
-        {% assign page-title = page.title | append: ' - ' | append: site.title | escape %}
+        {% assign page-title = page.title | escape %}
         {% else %}
         {% assign page-title = site.title | escape %}
         {% endif %}
 
+        {% if page.title %}
+        <title>{{ page-title | append: ' - ' | append: site.title | escape }}</title>
+        {% else %}
         <title>{{ page-title }}</title>
+        {% endif %}
+
 
         {% if site.gems contains "jekyll-seo-tag" %}
         <!-- jekyll-seo-tag -->
@@ -54,7 +59,7 @@
         {% endif %}
 
         <section class="page-header">
-            <h1 class="project-name">{{ page.title | escape }}</h1>
+            <h1 class="project-name">{{ page-title | escape }}</h1>
             <h2 class="project-tagline">{{ page-tagline }}</h2>
             {% if page.layout == 'home' and site.github.is_project_page %}
             <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
