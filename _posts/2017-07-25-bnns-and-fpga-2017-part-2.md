@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Binarized neural networks and FPGA 2017 papers (part 2)"
-date: 2017-7-13
+date: 2017-7-25
 comments: true
 tags: [FPGA, deep learning, paper review, BNN]
 ---
