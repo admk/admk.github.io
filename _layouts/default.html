@@ -8,7 +8,7 @@
         <meta name="theme-color" content="#157878">
 
         {% if page.title %}
-        {% assign page-title = page.title | escape %}
+        {% assign page-title = page.title | append: ' - ' | append: site.title | escape %}
         {% else %}
         {% assign page-title = site.title | escape %}
         {% endif %}
@@ -54,7 +54,7 @@
         {% endif %}
 
         <section class="page-header">
-            <h1 class="project-name">{{ page-title }}</h1>
+            <h1 class="project-name">{{ page.title | escape }}</h1>
             <h2 class="project-tagline">{{ page-tagline }}</h2>
             {% if page.layout == 'home' and site.github.is_project_page %}
             <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
@@ -90,7 +90,7 @@
                 </span>
 
                 <!-- RSS icon -->
-                {% if site.gems contains "jekyll-feed" %}
+                {% if site.plugins contains "jekyll-feed" %}
                 <span class="my-span-icon">
                     <a href="{{ "/feed.xml" | relative_url }}" aria-label="RSS feed" title="{{ site.github.owner_name }}'s RSS feed">
                         <svg class="my-svg-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3.374 17c-.897 0-1.626-.727-1.626-1.624s.729-1.624 1.626-1.624 1.626.727 1.626 1.624-.729 1.624-1.626 1.624zm3.885 0c-.03-3.022-2.485-5.474-5.511-5.504v-2.406c4.361.03 7.889 3.555 7.92 7.91h-2.409zm4.081 0c-.016-5.297-4.303-9.571-9.592-9.594v-2.406c6.623.023 11.985 5.384 12 12h-2.408z"/></svg>

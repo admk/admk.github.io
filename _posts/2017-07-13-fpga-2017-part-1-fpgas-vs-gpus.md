@@ -26,9 +26,9 @@ review them here.
 
 # Can FPGAs Beat GPUs in Accelerating Next-Generation Deep Neural Networks?
 
-The [first paper {% include fa.html name='fa-file-pdf-o' %}][nurvitadhi17] with
+The [first paper {% include fa.html name='file-pdf-o' %}][nurvitadhi17] with
 the above title that I am going to review is written by Nurvitadhi *et al.*
-from Intel.  The authors pitch their latest [Arria 10][arria10] and [Stratix
+from Intel.  The authors pit their latest [Arria 10][arria10] and [Stratix
 10][stratix10] devices against [Titan Xp][titanxp] in the deep learning arena,
 and show that Stratix 10 has between 10% and 5.4x better performance than Titan
 Xp in terms of common [GEneral Matrix to matrix Multiplication (GEMM)][gemm]
@@ -61,7 +61,7 @@ is the cost.  Although Stratix 10 could be 50% faster in sparse GEMM, its
 6.67x that of a [Titan Xp][titanxp-price].  This places Stratix 10 at 2.06
 GOP/s/$, whereas Titan Xp is at 9.07 GOP/s/$!  Although the cost-effectiveness
 result favors Stratix 10 in binary neural networks (BNNs), *e.g.*, [XNOR-Net {%
-include fa.html name='fa-file-pdf-o' %}][xnor-net], BNNs still cannot match the
+include fa.html name='file-pdf-o' %}][xnor-net], BNNs still cannot match the
 accuracy of a standard deep neural network in tasks such as [ILSVRC][ilsvrc].
 Moreover, the high development cost of FPGA applications further exacerbates
 the situation.
@@ -82,8 +82,8 @@ competition from other fellow FPGA researchers.
 [color-manga]: http://kvfrans.com/coloring-and-shading-line-art-automatically-through-conditional-gans/
 [color-photo]: http://richzhang.github.io/colorization/
 [sketch]: http://hi.cs.waseda.ac.jp/~esimo/en/research/sketch/
-[fpga2017]: http://isfpga.org/
-[fpga2017-program]: http://isfpga.org/program.html
+[fpga2017]: http://isfpga.org/fpga2017/index.html
+[fpga2017-program]: http://isfpga.org/fpga2017/program.html
 [arria10]: https://www.altera.com/products/fpga/arria-series/arria-10/overview.html
 [stratix10]: https://www.altera.com/products/fpga/stratix-series/stratix-10/overview.html
 [titanxp]: https://www.nvidia.com/en-us/geforce/products/10series/titan-xp/

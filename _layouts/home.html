@@ -16,9 +16,10 @@ layout: default
 
         {% assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" %}
         <span class="post-meta">
+            {% include fa.html name='calendar' %}
             {{ post.date | date: date_format }}
-            {% if post.comments %} •
-            <a data-disqus-identifier={{ post.id }} href="{{ post.url | relative_url }}#disqus_thread"></a>
+            {% if post.comments %} &nbsp; {% include fa.html name='comments' %}
+            <a data-disqus-identifier="{{ post.id }}" href="{{ post.url | relative_url }}#disqus_thread"></a>
             {% endif %}
         </span>
 
